@@ -172,7 +172,7 @@ class GroupReader(object):
         user_elements = self._get_child_element(parent, tag)
         if user_elements is not None:
             for user in user_elements.findall('user'):
-                identity_elements = user.findall('./userID/identity')
+                identity_elements = user.findall('./identities/identity')
                 identity_type = identity_elements[0].get('type')
                 name = identity_elements[0].text
                 users.add(User(Identity(name, identity_type)))
