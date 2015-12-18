@@ -87,4 +87,4 @@ class User(object):
         return hash(self.user_id)
 
     def __repr__(self):
-        return self.user_id
+        return self.user_id.__repr__()
